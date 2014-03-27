@@ -1,0 +1,29 @@
+
+ <!doctype html>
+<html>
+	<head>
+		<title>Chat Server</title>
+		<!-- <link rel="stylesheet" type="text/css" href="/css/chat.css"></link> -->
+	</head>
+	<body>
+		<div class ="body">
+			<h1>Chatting!!!</h1>
+		</div>
+		
+		<script src="/socket.io/socket.io.js"></script>
+		
+		<script>
+		  var chat = io.connect('http://'+window.location.hostname+':8000/chat');
+		  var news = io.connect('http://'+window.location.hostname+':8000/news');
+		  
+		  chat.on('connect', function () {
+		    chat.emit('hi!');
+		  });
+		  
+		  news.on('news', function () {
+		    news.emit('woot');
+		  });
+		</script>
+	</body>
+</html>
+

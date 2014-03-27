@@ -1,0 +1,95 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Chat Server</title>
+		<!-- <link rel="stylesheet" type="text/css" href="/css/chat.css"></link> -->
+	</head>
+	<body>
+		<div class ="body">
+			<h1>Chatting!!!</h1>
+		</div>
+		<div id="loginBox">
+			<input type="textarea" id="username" placeholder="Please enter username"></input>
+			<input type="password" id="password"  placeholder="Please enter password"></input>
+			<button onclick="loginUser()">Login</button><br/>
+		</div>
+		<div hidden="true" id="chatBox">
+			<input type="textarea" id="textinput"></input>
+			<button onclick="sendPing()">Submit</button>
+		</div>
+		<div id="usersList" hidden="true">
+			<span>Logged in users</span>
+			<ul id="userList">
+			</ul>
+		</div>
+		<script src="/socket.io/socket.io.js"></script>
+
+		<script>
+		var socket,
+		selectedUsername;
+			function loginUser() {
+				var username = document.querySelectorAll('input#username')[0]
+				var password = document.querySelectorAll('input#password')[0];
+				
+				document.querySelectorAll('div#usersList')[0].hidden = false;
+				document.querySelectorAll('div#loginBox')[0].hidden = true;
+				
+				socket = io.connect('http://'+window.location.hostname+':8000');
+				socket.emit('loginUser', { username: username.value,password:password.value});
+			  	socket.on('news', function (data) {
+			    	console.log(data);
+			    	socket.emit('my other event', { my: 'data' });
+			  	});
+			  	socket.on('pingrecieved',function(data){
+			  		var newNode = document.createElement('div');
+			  		newNode.innerHTML = data.data.my;
+			  		document.body.appendChild(newNode);
+			  		console.log('Ping recieved from server');
+			  	});
+			  	socket.on('personOnline', function(data){
+			  		appendToList(data.data);
+			  		
+			  	});
+			  	
+			  	socket.on('erroMessage', function(data){
+			  		appendToList(data.data);
+			  		
+			  	});
+			  	
+			  	
+			  	function appendToList(username, guid) {
+			  		var newNode = document.createElement('li');
+			  		newNode.innerHTML = username;
+			  		newNode.addEventListener('click',function() {
+			  			document.querySelectorAll('div#chatBox')[0].hidden = false;
+			  			selectedUsername = username;
+			  		});
+			  		document.querySelectorAll('ul#userList')[0].appendChild(newNode);
+			  	}
+			  	socket.on('personsOnline', function(data){
+			  		var socketMap = data.data;
+			  		document.querySelectorAll('ul#userList')[0].innerHTML = '';
+			  		for(var key in socketMap) {
+			  			if(socketMap.hasOwnProperty(key)) {
+			  				appendToList(socketMap[key].username);
+			  			}
+				  	}
+			  	});
+			}
+			function sendPing() {
+				var textarea = document.querySelectorAll('input#textinput')[0];
+				console.log({
+				 my: textarea.value,
+				 username: selectedUsername
+				 });
+				socket.emit('pingserver', {
+				 my: data.responseText,
+				 username: selectedUsername
+				 });
+				textarea.value = '';
+
+			}
+			
+		</script>
+	</body>
+</html>

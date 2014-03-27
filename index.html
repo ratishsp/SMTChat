@@ -1,0 +1,36 @@
+
+<!doctype html>
+<html>
+	<head>
+		<title>Chat Server</title>
+		<!-- <link rel="stylesheet" type="text/css" href="/css/chat.css"></link> -->
+	</head>
+	<body>
+		<div class ="body">
+			<h1>Chatting!!!</h1>
+		</div>
+		<input type="textarea" id="textinput"></input>
+		<button onclick="sendPing()">Submit</button>
+		<script src="/socket.io/socket.io.js"></script>
+		<script>
+			function sendPing() {
+				var textarea = document.querySelectorAll('input#textinput')[0];
+
+				socket.emit('pingserver', { my: textarea.value});
+				textarea.value = '';
+			}
+			var socket = io.connect('http://'+window.location.hostname+':8000');
+		  	socket.on('news', function (data) {
+		    	console.log(data);
+		    	socket.emit('my other event', { my: 'data' });
+		  	});
+		  	socket.on('pingrecieved',function(data){
+		  		var newNode = document.createElement('div');
+		  		newNode.innerHTML = data.data.my;
+		  		document.body.appendChild(newNode);
+		  		console.log('Ping recieved from server');
+		  	});
+		</script>
+	</body>
+</html>
+
