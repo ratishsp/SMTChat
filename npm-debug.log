@@ -1,0 +1,291 @@
+info it worked if it ends with ok
+verbose cli [ 'node', '/usr/bin/npm', 'install', 'sleep' ]
+info using npm@1.1.4
+info using node@v0.6.12
+verbose config file /home/arya/.npmrc
+verbose config file /usr/etc/npmrc
+verbose config file /usr/share/npm/npmrc
+verbose caching /home/arya/Project/hacknight/package.json
+verbose loadDefaults application-name@0.0.1
+verbose caching /home/arya/Project/hacknight/node_modules/guid/package.json
+verbose loadDefaults guid@0.0.10
+verbose caching /home/arya/Project/hacknight/node_modules/socket.io/package.json
+verbose loadDefaults socket.io@0.9.16
+verbose caching /home/arya/Project/hacknight/node_modules/express-dispatcher/package.json
+verbose loadDefaults express-dispatcher@0.0.0
+verbose caching /home/arya/Project/hacknight/node_modules/ender/package.json
+verbose loadDefaults ender@1.1.0
+verbose caching /home/arya/Project/hacknight/node_modules/jade/package.json
+verbose loadDefaults jade@0.35.0
+verbose caching /home/arya/Project/hacknight/node_modules/express/package.json
+verbose loadDefaults express@3.4.0
+verbose caching /home/arya/Project/hacknight/node_modules/route/package.json
+verbose loadDefaults route@0.2.5
+verbose caching /home/arya/Project/hacknight/node_modules/connect/package.json
+verbose loadDefaults connect@2.8.8
+verbose caching /home/arya/Project/hacknight/node_modules/mongodb/package.json
+verbose loadDefaults mongodb@1.3.19
+verbose caching /home/arya/Project/hacknight/node_modules/bunyan/package.json
+verbose loadDefaults bunyan@0.21.4
+verbose from cache /home/arya/Project/hacknight/package.json
+verbose readDependencies: using package.json deps
+verbose cache add [ 'sleep', null ]
+silly cache add: name, spec, args [ undefined, 'sleep', [ 'sleep', null ] ]
+verbose parsed url { pathname: 'sleep', path: 'sleep', href: 'sleep' }
+verbose addNamed [ 'sleep', '' ]
+verbose addNamed [ null, '' ]
+silly name, range, hasData [ 'sleep', '', false ]
+verbose raw, before any munging sleep
+verbose url resolving [ 'http://registry.npmjs.org/', './sleep' ]
+verbose url resolved http://registry.npmjs.org/sleep
+verbose etag "W5TLLGL2ZAVTGQ3QK0JW0IB1"
+http GET http://registry.npmjs.org/sleep
+silly get cb [ 304, undefined ]
+verbose etag sleep from cache
+silly name, range, hasData 2 [ 'sleep', '', true ]
+silly versions [ 'sleep',
+silly versions   [ '1.0.0', '1.0.1', '1.0.2', '1.1.0', '1.1.1', '1.1.2', '1.1.3' ] ]
+verbose bin dist [ '0.6-ares1.7.5-evundefined-openssl1.0.1-v83.7.12.22-linux-ia32-3.8.0-37-generic',
+verbose bin dist   { shasum: '705f3476f97e6752bb4bb5195519094dfd9dc505',
+verbose bin dist     tarball: 'http://registry.npmjs.org/sleep/-/sleep-1.1.3.tgz' } ]
+verbose caching /home/arya/.npm/sleep/1.1.3/package/package.json
+verbose loadDefaults sleep@1.1.3
+silly resolved [ { name: 'sleep',
+silly resolved     version: '1.1.3',
+silly resolved     main: './lib/index.js',
+silly resolved     description: 'Add sleep() and usleep() to nodejs',
+silly resolved     homepage: 'http://github.com/ErikDubbelboer/node-sleep',
+silly resolved     author: { name: 'Erik Dubbelboer', email: 'erik@dubbelboer.com' },
+silly resolved     engines: { node: '>=0.4.0' },
+silly resolved     keywords: [ 'sleep', 'usleep' ],
+silly resolved     repository: 
+silly resolved      { type: 'git',
+silly resolved        url: 'git://github.com/ErikDubbelboer/node-sleep.git' },
+silly resolved     repositories: 
+silly resolved      [ { type: 'git',
+silly resolved          url: 'https://github.com/ErikDubbelboer/node-sleep.git' } ],
+silly resolved     dependencies: { mkdirp: '~0.3.5' },
+silly resolved     scripts: { install: 'node build.js || nodejs build.js' },
+silly resolved     gypfile: true,
+silly resolved     _id: 'sleep@1.1.3',
+silly resolved     devDependencies: {},
+silly resolved     optionalDependencies: {},
+silly resolved     _engineSupported: true,
+silly resolved     _npmVersion: '1.1.4',
+silly resolved     _nodeVersion: 'v0.6.12',
+silly resolved     _defaultsLoaded: true,
+silly resolved     _from: 'sleep' } ]
+info into /home/arya/Project/hacknight sleep@1.1.3
+info installOne sleep@1.1.3
+verbose from cache /home/arya/.npm/sleep/1.1.3/package/package.json
+info unbuild /home/arya/Project/hacknight/node_modules/sleep
+verbose mkdir (expected) error ENOENT, no such file or directory '/home/arya/Project/hacknight/node_modules/___sleep.npm'
+verbose mkdir done: /home/arya/Project/hacknight/node_modules/___sleep.npm 755
+verbose unpack_ uid, gid [ undefined, undefined ]
+verbose unpackTarget /home/arya/Project/hacknight/node_modules/sleep
+silly gunzTarPerm modes [ '755', '644' ]
+silly afterUntar ok
+silly asyncMap in gTP /home/arya/Project/hacknight/node_modules/___sleep.npm/package
+silly asyncMap in gTP /home/arya/Project/hacknight/node_modules/___sleep.npm/package/binding.gyp
+silly asyncMap in gTP /home/arya/Project/hacknight/node_modules/___sleep.npm/package/.jshintignore
+silly asyncMap in gTP /home/arya/Project/hacknight/node_modules/___sleep.npm/package/.jshintrc
+silly asyncMap in gTP /home/arya/Project/hacknight/node_modules/___sleep.npm/package/build.js
+silly asyncMap in gTP /home/arya/Project/hacknight/node_modules/___sleep.npm/package/sleep.cc
+silly asyncMap in gTP /home/arya/Project/hacknight/node_modules/___sleep.npm/package/.npmignore
+silly asyncMap in gTP /home/arya/Project/hacknight/node_modules/___sleep.npm/package/test.js
+silly asyncMap in gTP /home/arya/Project/hacknight/node_modules/___sleep.npm/package/package.json
+silly asyncMap in gTP /home/arya/Project/hacknight/node_modules/___sleep.npm/package/README.md
+silly asyncMap in gTP /home/arya/Project/hacknight/node_modules/___sleep.npm/package/build-util
+silly asyncMap in gTP /home/arya/Project/hacknight/node_modules/___sleep.npm/package/build-util/tools.js
+silly asyncMap in gTP /home/arya/Project/hacknight/node_modules/___sleep.npm/package/lib
+silly asyncMap in gTP /home/arya/Project/hacknight/node_modules/___sleep.npm/package/lib/index.js
+silly asyncMap in gTP /home/arya/Project/hacknight/node_modules/___sleep.npm/package/lib/binary_name.js
+silly chmod package 755
+verbose gunzed /home/arya/Project/hacknight/node_modules/___sleep.npm/package
+verbose rm'ed /home/arya/Project/hacknight/node_modules/sleep
+verbose renamed [ '/home/arya/Project/hacknight/node_modules/___sleep.npm/package',
+verbose renamed   '/home/arya/Project/hacknight/node_modules/sleep' ]
+verbose caching /home/arya/Project/hacknight/node_modules/sleep/package.json
+verbose loadDefaults sleep@1.1.3
+info preinstall sleep@1.1.3
+verbose from cache /home/arya/Project/hacknight/node_modules/sleep/package.json
+verbose readDependencies: using package.json deps
+verbose from cache /home/arya/Project/hacknight/node_modules/sleep/package.json
+verbose readDependencies: using package.json deps
+verbose cache add [ 'mkdirp@~0.3.5', null ]
+silly cache add: name, spec, args [ undefined, 'mkdirp@~0.3.5', [ 'mkdirp@~0.3.5', null ] ]
+verbose parsed url { pathname: 'mkdirp@~0.3.5',
+verbose parsed url   path: 'mkdirp@~0.3.5',
+verbose parsed url   href: 'mkdirp@~0.3.5' }
+silly cache add: name, spec, args [ 'mkdirp', '~0.3.5', [ 'mkdirp', '~0.3.5' ] ]
+verbose parsed url { pathname: '~0.3.5', path: '~0.3.5', href: '~0.3.5' }
+verbose addNamed [ 'mkdirp', '~0.3.5' ]
+verbose addNamed [ null, '>=0.3.5- <0.4.0-' ]
+silly name, range, hasData [ 'mkdirp', '>=0.3.5- <0.4.0-', false ]
+verbose raw, before any munging mkdirp
+verbose url resolving [ 'http://registry.npmjs.org/', './mkdirp' ]
+verbose url resolved http://registry.npmjs.org/mkdirp
+verbose etag "8EJ25SNFKTRAGIQ9TWQRFQ82C"
+http GET http://registry.npmjs.org/mkdirp
+silly get cb [ 304, undefined ]
+verbose etag mkdirp from cache
+silly name, range, hasData 2 [ 'mkdirp', '>=0.3.5- <0.4.0-', true ]
+silly versions [ 'mkdirp',
+silly versions   [ '0.0.1',
+silly versions     '0.0.2',
+silly versions     '0.0.3',
+silly versions     '0.0.4',
+silly versions     '0.0.5',
+silly versions     '0.0.6',
+silly versions     '0.0.7',
+silly versions     '0.1.0',
+silly versions     '0.2.0',
+silly versions     '0.2.1',
+silly versions     '0.2.2',
+silly versions     '0.3.0',
+silly versions     '0.3.1',
+silly versions     '0.3.2',
+silly versions     '0.3.3',
+silly versions     '0.3.4',
+silly versions     '0.3.5' ] ]
+verbose bin dist [ '0.6-ares1.7.5-evundefined-openssl1.0.1-v83.7.12.22-linux-ia32-3.8.0-37-generic',
+verbose bin dist   { shasum: 'de3e5f8961c88c787ee1368df849ac4413eca8d7',
+verbose bin dist     tarball: 'http://registry.npmjs.org/mkdirp/-/mkdirp-0.3.5.tgz' } ]
+verbose caching /home/arya/.npm/mkdirp/0.3.5/package/package.json
+verbose loadDefaults mkdirp@0.3.5
+silly resolved [ { name: 'mkdirp',
+silly resolved     description: 'Recursively mkdir, like `mkdir -p`',
+silly resolved     version: '0.3.5',
+silly resolved     author: 
+silly resolved      { name: 'James Halliday',
+silly resolved        email: 'mail@substack.net',
+silly resolved        url: 'http://substack.net' },
+silly resolved     main: './index',
+silly resolved     keywords: [ 'mkdir', 'directory' ],
+silly resolved     repository: 
+silly resolved      { type: 'git',
+silly resolved        url: 'git://github.com/substack/node-mkdirp.git' },
+silly resolved     scripts: { test: 'tap test/*.js' },
+silly resolved     devDependencies: { tap: '~0.4.0' },
+silly resolved     license: 'MIT',
+silly resolved     _id: 'mkdirp@0.3.5',
+silly resolved     dependencies: {},
+silly resolved     optionalDependencies: {},
+silly resolved     engines: { node: '*' },
+silly resolved     _engineSupported: true,
+silly resolved     _npmVersion: '1.1.4',
+silly resolved     _nodeVersion: 'v0.6.12',
+silly resolved     _defaultsLoaded: true,
+silly resolved     _from: 'mkdirp@~0.3.5' } ]
+info into /home/arya/Project/hacknight/node_modules/sleep mkdirp@0.3.5
+info installOne mkdirp@0.3.5
+verbose from cache /home/arya/.npm/mkdirp/0.3.5/package/package.json
+info unbuild /home/arya/Project/hacknight/node_modules/sleep/node_modules/mkdirp
+verbose mkdir (expected) error ENOENT, no such file or directory '/home/arya/Project/hacknight/node_modules/sleep/node_modules'
+verbose mkdir (expected) error ENOENT, no such file or directory '/home/arya/Project/hacknight/node_modules/sleep/node_modules/___mkdirp.npm'
+verbose mkdir done: /home/arya/Project/hacknight/node_modules/sleep/node_modules/___mkdirp.npm 755
+verbose unpack_ uid, gid [ undefined, undefined ]
+verbose unpackTarget /home/arya/Project/hacknight/node_modules/sleep/node_modules/mkdirp
+silly gunzTarPerm modes [ '755', '644' ]
+silly afterUntar ok
+silly asyncMap in gTP /home/arya/Project/hacknight/node_modules/sleep/node_modules/___mkdirp.npm/package
+silly asyncMap in gTP /home/arya/Project/hacknight/node_modules/sleep/node_modules/___mkdirp.npm/package/index.js
+silly asyncMap in gTP /home/arya/Project/hacknight/node_modules/sleep/node_modules/___mkdirp.npm/package/.travis.yml
+silly asyncMap in gTP /home/arya/Project/hacknight/node_modules/sleep/node_modules/___mkdirp.npm/package/readme.markdown
+silly asyncMap in gTP /home/arya/Project/hacknight/node_modules/sleep/node_modules/___mkdirp.npm/package/.npmignore
+silly asyncMap in gTP /home/arya/Project/hacknight/node_modules/sleep/node_modules/___mkdirp.npm/package/package.json
+silly asyncMap in gTP /home/arya/Project/hacknight/node_modules/sleep/node_modules/___mkdirp.npm/package/LICENSE
+silly asyncMap in gTP /home/arya/Project/hacknight/node_modules/sleep/node_modules/___mkdirp.npm/package/examples
+silly asyncMap in gTP /home/arya/Project/hacknight/node_modules/sleep/node_modules/___mkdirp.npm/package/examples/pow.js
+silly asyncMap in gTP /home/arya/Project/hacknight/node_modules/sleep/node_modules/___mkdirp.npm/package/test
+silly asyncMap in gTP /home/arya/Project/hacknight/node_modules/sleep/node_modules/___mkdirp.npm/package/test/umask.js
+silly asyncMap in gTP /home/arya/Project/hacknight/node_modules/sleep/node_modules/___mkdirp.npm/package/test/mkdirp.js
+silly asyncMap in gTP /home/arya/Project/hacknight/node_modules/sleep/node_modules/___mkdirp.npm/package/test/sync.js
+silly asyncMap in gTP /home/arya/Project/hacknight/node_modules/sleep/node_modules/___mkdirp.npm/package/test/clobber.js
+silly asyncMap in gTP /home/arya/Project/hacknight/node_modules/sleep/node_modules/___mkdirp.npm/package/test/race.js
+silly asyncMap in gTP /home/arya/Project/hacknight/node_modules/sleep/node_modules/___mkdirp.npm/package/test/chmod.js
+silly asyncMap in gTP /home/arya/Project/hacknight/node_modules/sleep/node_modules/___mkdirp.npm/package/test/perm_sync.js
+silly asyncMap in gTP /home/arya/Project/hacknight/node_modules/sleep/node_modules/___mkdirp.npm/package/test/return.js
+silly asyncMap in gTP /home/arya/Project/hacknight/node_modules/sleep/node_modules/___mkdirp.npm/package/test/umask_sync.js
+silly asyncMap in gTP /home/arya/Project/hacknight/node_modules/sleep/node_modules/___mkdirp.npm/package/test/return_sync.js
+silly asyncMap in gTP /home/arya/Project/hacknight/node_modules/sleep/node_modules/___mkdirp.npm/package/test/perm.js
+silly asyncMap in gTP /home/arya/Project/hacknight/node_modules/sleep/node_modules/___mkdirp.npm/package/test/root.js
+silly asyncMap in gTP /home/arya/Project/hacknight/node_modules/sleep/node_modules/___mkdirp.npm/package/test/rel.js
+silly chmod package 755
+verbose gunzed /home/arya/Project/hacknight/node_modules/sleep/node_modules/___mkdirp.npm/package
+verbose rm'ed /home/arya/Project/hacknight/node_modules/sleep/node_modules/mkdirp
+verbose renamed [ '/home/arya/Project/hacknight/node_modules/sleep/node_modules/___mkdirp.npm/package',
+verbose renamed   '/home/arya/Project/hacknight/node_modules/sleep/node_modules/mkdirp' ]
+verbose caching /home/arya/Project/hacknight/node_modules/sleep/node_modules/mkdirp/package.json
+verbose loadDefaults mkdirp@0.3.5
+info preinstall mkdirp@0.3.5
+verbose from cache /home/arya/Project/hacknight/node_modules/sleep/node_modules/mkdirp/package.json
+verbose readDependencies: using package.json deps
+verbose from cache /home/arya/Project/hacknight/node_modules/sleep/node_modules/mkdirp/package.json
+verbose readDependencies: using package.json deps
+silly resolved []
+verbose about to build /home/arya/Project/hacknight/node_modules/sleep/node_modules/mkdirp
+info build /home/arya/Project/hacknight/node_modules/sleep/node_modules/mkdirp
+verbose from cache /home/arya/Project/hacknight/node_modules/sleep/node_modules/mkdirp/package.json
+verbose linkStuff [ false,
+verbose linkStuff   false,
+verbose linkStuff   false,
+verbose linkStuff   '/home/arya/Project/hacknight/node_modules/sleep/node_modules' ]
+info linkStuff mkdirp@0.3.5
+verbose linkBins mkdirp@0.3.5
+verbose linkMans mkdirp@0.3.5
+verbose rebuildBundles mkdirp@0.3.5
+info install mkdirp@0.3.5
+info postinstall mkdirp@0.3.5
+verbose installOne cb mkdirp@0.3.5
+verbose about to build /home/arya/Project/hacknight/node_modules/sleep
+info build /home/arya/Project/hacknight/node_modules/sleep
+verbose from cache /home/arya/Project/hacknight/node_modules/sleep/package.json
+verbose linkStuff [ false,
+verbose linkStuff   false,
+verbose linkStuff   false,
+verbose linkStuff   '/home/arya/Project/hacknight/node_modules' ]
+info linkStuff sleep@1.1.3
+verbose linkBins sleep@1.1.3
+verbose linkMans sleep@1.1.3
+verbose rebuildBundles sleep@1.1.3
+verbose rebuildBundles [ 'mkdirp' ]
+info install sleep@1.1.3
+verbose unsafe-perm in lifecycle true
+silly exec sh "-c" "node build.js || nodejs build.js"
+silly spawning [ 'sh',
+silly spawning   [ '-c', 'node build.js || nodejs build.js' ],
+silly spawning   '/home/arya/Project/hacknight/node_modules/sleep' ]
+info sleep@1.1.3 Failed to exec install script
+ERR! error installing sleep@1.1.3
+info unbuild /home/arya/Project/hacknight/node_modules/sleep
+verbose from cache /home/arya/Project/hacknight/node_modules/sleep/package.json
+info preuninstall sleep@1.1.3
+info uninstall sleep@1.1.3
+verbose unbuild sleep@1.1.3 [ true,
+verbose unbuild sleep@1.1.3   '/home/arya/Project/hacknight/node_modules',
+verbose unbuild sleep@1.1.3   '/home/arya/Project/hacknight/node_modules' ]
+info postuninstall sleep@1.1.3
+verbose installOne cb sleep@1.1.3
+ERR! sleep@1.1.3 install: `node build.js || nodejs build.js`
+ERR! `sh "-c" "node build.js || nodejs build.js"` failed with 127
+ERR! 
+ERR! Failed at the sleep@1.1.3 install script.
+ERR! This is most likely a problem with the sleep package,
+ERR! not with npm itself.
+ERR! Tell the author that this fails on your system:
+ERR!     node build.js || nodejs build.js
+ERR! You can get their info via:
+ERR!     npm owner ls sleep
+ERR! There is likely additional logging output above.
+ERR! 
+ERR! System Linux 3.8.0-37-generic
+ERR! command "node" "/usr/bin/npm" "install" "sleep"
+ERR! cwd /home/arya/Project/hacknight
+ERR! node -v v0.6.12
+ERR! npm -v 1.1.4
+ERR! code ELIFECYCLE
+ERR! message sleep@1.1.3 install: `node build.js || nodejs build.js`
+ERR! message `sh "-c" "node build.js || nodejs build.js"` failed with 127
+ERR! errno {}
+verbose exit [ 1, true ]

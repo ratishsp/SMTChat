@@ -54,20 +54,38 @@ io.sockets.on('connection', function (socket) {
 				var exec = require('child_process').exec;
 				var child;
 				var child2;
+				var child2output;
+				var count =0;
+				
 
 				child2 = exec('echo '+data.my+' | nc arya-Lenovo-G460 1987',
-
-				child = exec('echo '+data.my+' | nc arya-Lenovo-G460 1986',
-//				child = exec('echo "मुखौटे शानदार दृश्य ।" | nc arya-Lenovo-G460 1986',
 				   function (error, stdout, stderr) {
-				      console.log('stdout: ' + stdout);
+				      console.log('stdout enen: ' + stdout);
 				      console.log('stderr: ' + stderr);
 				      if (error !== null) {
 					  console.log('exec error: ' + error);
 				      }
-				      data.my = stdout;	
-			  	      socketsMap[data.username].socket.emit('pingrecieved',{data: data});
+				      child2output = stdout;	
+//			  	      socketsMap[data.username].socket.emit('pingrecieved',{data: data});
+					
+				     child3 = exec('echo '+child2output.trim()+' | nc arya-Lenovo-G460 1986',
+					function(error,stdout,stderr){
+					console.log('translation of love '+stdout);
+					console.log('stderr: '+stderr);
+					if(error !== null){
+						console.log('exec error during love translation '+error);
+					}
+					      data.my = stdout;	
+				  	      socketsMap[data.username].socket.emit('pingrecieved',{data: data});
+					});
+
+				
+
 				   });	  	    
+				while(count<50000){
+					count++;
+				}
+				console.log(' child2output post sleep '+child2output);
 		  	    });
 		  	    socket.broadcast.emit('personOnline', {
 		  	      data: socketMap[randDomguid].username

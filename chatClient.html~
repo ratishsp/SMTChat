@@ -17,6 +17,12 @@
 			<input type="textarea" id="textinput"></input>
 			<button onclick="sendPing()">Submit</button>
 		</div>
+		<div id="loggedInPerson" hidden="true" >
+			<span>logged in person</span>
+
+			<input type="text" id="loggedInPersonName" value="Norway" readonly />
+
+		</div>
 		<div id="usersList" hidden="true">
 			<span>Logged in users</span>
 			<ul id="userList">
@@ -32,8 +38,11 @@
 				var password = document.querySelectorAll('input#password')[0];
 				
 				document.querySelectorAll('div#usersList')[0].hidden = false;
+				document.querySelectorAll('div#loggedInPerson')[0].hidden = false;
 				document.querySelectorAll('div#loginBox')[0].hidden = true;
-				
+		  		var usernameNode = document.createElement('li');
+		  		usernameNode.innerHTML = username;
+				document.querySelectorAll('input#loggedInPersonName')[0].setAttrbute("value",username);
 				socket = io.connect('http://'+window.location.hostname+':8000');
 				socket.emit('loginUser', { username: username.value,password:password.value});
 			  	socket.on('news', function (data) {
@@ -83,7 +92,7 @@
 				 username: selectedUsername
 				 });
 				socket.emit('pingserver', {
-				 my: data.responseText,
+				 my: textarea.value,
 				 username: selectedUsername
 				 });
 				textarea.value = '';
